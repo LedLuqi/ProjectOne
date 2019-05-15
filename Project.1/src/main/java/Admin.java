@@ -10,18 +10,18 @@ public class Admin {
     private Admin() {
     }
 
-    public static Admin getInstance(){
-        if (instance == null){
+    public static Admin getInstance() {
+        if (instance == null) {
             instance = new Admin();
         }
         return instance;
     }
 
-    Worker createWorker (workerType type){
+    public static Worker createWorker(workerType type) {
 
         Worker worker = null;
 
-        switch(type){
+        switch (type) {
             case TILER:
                 Tiler tiler = new Tiler();
                 worker = tiler;
